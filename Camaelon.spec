@@ -2,7 +2,7 @@ Summary:	Theme bundle for GNUstep
 Summary(pl):	Pakiet z motywami dla GNUstepa
 Name:		Camaelon
 Version:	0.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://www.roard.com/camaelon/download/%{name}-%{version}.tgz
