@@ -2,17 +2,17 @@ Summary:	Theme bundle for GNUstep
 Summary(pl):	Pakiet z motywami dla GNUstepa
 Name:		Camaelon
 Version:	0.1
-Release:	1
-License:	LGPL/GPL
+Release:	2
+License:	GPL
 Group:		X11/Libraries
-Source0:	http://www.roard.com/camaelon/download/Camaelon-0.1.tgz
+Source0:	http://www.roard.com/camaelon/download/%{name}-%{version}.tgz
 # Source0-md5:	5b870e8e8d543ac25e58a231ab86bb57
 URL:		http://www.roard.com/camaelon/
 BuildRequires:	gnustep-gui-devel >= 0.8.7
 Requires:	gnustep-gui >= 0.8.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _prefix         /usr/lib/GNUstep
+%define         _prefix         /usr/%{_lib}/GNUstep
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
@@ -22,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		gscpu		ix86
 %else
 # also s/alpha.*/alpha/, but we use only "alpha" arch for now
-%define		gscpu		%{_target_cpu}
+%define		gscpu		%(echo %{_target_cpu} | sed -e 's/amd64/x86_64/;s/ppc/powerpc/')
 %endif
 
 %description
