@@ -1,5 +1,5 @@
 Summary:	Theme bundle for GNUstep 
-Summary(pl):	Pakiet motywy GNUstep
+Summary(pl):	Pakiet z motywami dla GNUstepa
 Name:		Camaelon
 Version:	0.1
 Release:	1
@@ -10,7 +10,7 @@ Source0:	http://www.roard.com/camaelon/download/Camaelon-0.1.tgz
 URL:		http://www.roard.com/camaelon/
 BuildRequires:	gnustep-gui-devel >= 0.8.7
 BuildRequires:	gnustep-back-devel >= 0.8.7
-Requires:	gnustep-gui
+Requires:	gnustep-gui >= 0.8.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _prefix         /usr/lib/GNUstep
@@ -27,10 +27,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %endif
 
 %description
-Camaelon is a theme bundle for GNUStep, loadable by settings in UserDefaults
+Camaelon is a theme bundle for GNUStep, loadable by settings in
+UserDefaults.
+
+%description -l pl
+Camaelon to pakiet z motywami dla GNUstepa, które mo¿na wczytywaæ
+poprzez ustawienia w UserDefaults.
 
 %prep
-%setup -q -n Camaelon
+%setup -q -n %{name}
 
 %build
 . %{_prefix}/System/Library/Makefiles/GNUstep.sh
@@ -53,7 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%dir %{_prefix}/System/Library/Bundles/%{name}.themeEngine/
-%attr(755,root,root) %{_prefix}/System/Library/Bundles/%{name}.themeEngine/%{gscpu}/%{gsos}/%{libcombo}/*
+%dir %{_prefix}/System/Library/Bundles/%{name}.themeEngine
+%attr(755,root,root) %{_prefix}/System/Library/Bundles/%{name}.themeEngine/%{gscpu}
+%dir %{_prefix}/System/Library/Bundles/%{name}.themeEngine/Resources
 %{_prefix}/System/Library/Bundles/%{name}.themeEngine/Resources/*.tiff
 %{_prefix}/System/Library/Bundles/%{name}.themeEngine/Resources/*.plist
