@@ -9,7 +9,6 @@ Source0:	http://www.roard.com/camaelon/download/Camaelon-0.1.tgz
 # Source0-md5:	5b870e8e8d543ac25e58a231ab86bb57
 URL:		http://www.roard.com/camaelon/
 BuildRequires:	gnustep-gui-devel >= 0.8.7
-BuildRequires:	gnustep-back-devel >= 0.8.7
 Requires:	gnustep-gui >= 0.8.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
