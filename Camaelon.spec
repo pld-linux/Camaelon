@@ -1,5 +1,5 @@
 Summary:	Theme bundle for GNUstep
-Summary(pl):	Pakiet z motywami dla GNUstepa
+Summary(pl.UTF-8):   Pakiet z motywami dla GNUstepa
 Name:		Camaelon
 Version:	0.1
 Release:	3
@@ -29,8 +29,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Camaelon is a theme bundle for GNUStep, loadable by settings in
 UserDefaults.
 
-%description -l pl
-Camaelon to pakiet z motywami dla GNUstepa, które mo¿na wczytywaæ
+%description -l pl.UTF-8
+Camaelon to pakiet z motywami dla GNUstepa, ktÃ³re moÅ¼na wczytywaÄ‡
 poprzez ustawienia w UserDefaults.
 
 %prep
