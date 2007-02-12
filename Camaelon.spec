@@ -1,5 +1,5 @@
 Summary:	Theme bundle for GNUstep
-Summary(pl.UTF-8):   Pakiet z motywami dla GNUstepa
+Summary(pl.UTF-8):	Pakiet z motywami dla GNUstepa
 Name:		Camaelon
 Version:	0.1
 Release:	3
